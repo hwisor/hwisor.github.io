@@ -3,6 +3,17 @@
 	font-family: 'EB Garamond';
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+  width: 1500px;
+  margin: 100px;
+}
+
 .title{
 	font-size: 150px;
 	color:  black;
