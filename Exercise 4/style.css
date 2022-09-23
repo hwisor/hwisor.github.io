@@ -1,21 +1,28 @@
 
+.container{
+  width: ;
+  height:;
+
+}
+
 div.a {
+  position: relative;
   width: 400px;
   height: 200px;
   background-color: yellow;
-  transform: translate(400px,50px);
+  
 }
 
 div.b {
+  position: relative;
   width: 400px;
   height: 200px;
   background-color: yellow;
-  transform: translate(1200px,-190px);
 }
 
 div.c {
+  position: relative;
   width: 70px;
   height: 200px;
   background-color: yellow;
-  transform:  skewX(-40deg);
 }
