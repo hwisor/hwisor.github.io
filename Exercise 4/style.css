@@ -1,4 +1,21 @@
-.square {
-  height: 50px;
-  width: 50px;
-  background-color: #555;
+
+div.a {
+  width: 400px;
+  height: 200px;
+  background-color: yellow;
+  transform: translate(400px,50px);
+}
+
+div.b {
+  width: 400px;
+  height: 200px;
+  background-color: yellow;
+  transform: translate(1200px,-190px);
+}
+
+div.c {
+  width: 70px;
+  height: 200px;
+  background-color: yellow;
+  transform:  skewX(-40deg);
+}
