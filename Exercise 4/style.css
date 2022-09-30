@@ -13,7 +13,7 @@ div.a {
   height: 100px;
   background-color: orange;
   transform: translateX(800px);
-  opacity: 50%;
+  mix-blend-mode: multiply;
   
 }
 
@@ -23,7 +23,7 @@ div.b {
   height: 100px;
   background-color: green;
   transform: translate(200px, -100px);
-  opacity: 50%;
+  mix-blend-mode: multiply;
 }
 
 div.c {
@@ -32,7 +32,7 @@ div.c {
   height: 100px;
   background-color: purple;
   transform: translate(200px, 500px);
-  opacity: 50%;
+  mix-blend-mode: multiply;
 }
 
 div.d {
@@ -41,7 +41,6 @@ div.d {
   height: 100px;
   background-color: yellow;
   transform: translate(800px, 400px);
-  opacity: 50%;
 }
 
 div.e {
@@ -50,7 +49,7 @@ div.e {
   height: 800px;
   background-color:blue;
   transform: translate(275px, -400px);
-  opacity: 50%;
+  mix-blend-mode: multiply;
 }
 
 div.f {
@@ -59,7 +58,7 @@ div.f {
   height: 800px;
   background-color:red;
   transform: translate(875px, -1200px);
-  opacity: 50%;
+  mix-blend-mode: multiply;
 }
 
 div.g {
@@ -68,4 +67,4 @@ div.g {
   height: 75px;
   background-color: pink;
   transform: translate(200px,-1650px);
-  opacity: 50%;
+  mix-blend-mode: multiply;
