@@ -1,0 +1,70 @@
+
+.container{
+  width: 1200px;
+  height:800px;
+  background-color:
+  margin: 100px;
+
+}
+
+div.a {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: orange;
+  transform: translateX(800px);
+  mix-blend-mode: multiply;
+  
+}
+
+div.b {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: green;
+  transform: translate(200px, -100px);
+  mix-blend-mode: multiply;
+}
+
+div.c {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: purple;
+  transform: translate(200px, 500px);
+  mix-blend-mode: multiply;
+}
+
+div.d {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  transform: translate(800px, 400px);
+}
+
+div.e {
+  position: relative;
+  width: 50px;
+  height: 800px;
+  background-color:blue;
+  transform: translate(275px, -400px);
+  mix-blend-mode: multiply;
+}
+
+div.f {
+  position: relative;
+  width: 50px;
+  height: 800px;
+  background-color:red;
+  transform: translate(875px, -1200px);
+  mix-blend-mode: multiply;
+}
+
+div.g {
+  position: relative;
+  width: 800px;
+  height: 75px;
+  background-color: pink;
+  transform: translate(200px,-1650px);
+  mix-blend-mode: multiply;
