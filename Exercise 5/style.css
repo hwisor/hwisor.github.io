@@ -161,10 +161,26 @@ div.f {
 }
 
 div.g {
-  position: relative;
+  position: absolute;
   width: 800px;
   height: 75px;
   background-color: pink;
-  transform: translate(200px,-1400px);
   mix-blend-mode: multiply;
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+
+@keyframes spin {
+ 0%{
+    transform: rotate(0 deg);
+
+   }
+100%{
+    transform: rotate(360deg);
+   }
 }
