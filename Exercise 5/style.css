@@ -3,8 +3,6 @@
   width: 1200px;
   height:800px;
   margin: 100px;
-  background-color: beige;
-
 }
 
 div.a {
@@ -60,7 +58,7 @@ div.b {
 }
 
 div.c {
-  position: relative;
+  position: absolute;
   width: 200px;
   height: 100px;
   background-color: purple;
@@ -85,7 +83,7 @@ div.c {
 }
 
 div.d {
-  position: relative;
+  position: absolute;
   width: 200px;
   height: 100px;
   background-color: yellow;
@@ -101,17 +99,16 @@ div.d {
 
 @keyframes dslide {
   0% {
-    transform: translate(800px,600px);
+    transform: translate(800px,700px);
   }
 
   100% {
-    transform: translate(200px,-100px);
+    transform: translate(200px,0px);
   }
 }
 
-
 div.e {
-  position: relative;
+  position: absolute;
   width: 50px;
   height: 800px;
   background-color:blue;
@@ -127,16 +124,16 @@ div.e {
 
 @keyframes eslide {
   0% {
-    transform: translate(275px,-200px);
+    transform: translate(275px,0px);
   }
 
   100% {
-    transform: translate(875px,-200px);
+    transform: translate(875px,0px);
   }
 }
 
 div.f {
-  position: relative;
+  position: absolute;
   width: 50px;
   height: 800px;
   background-color:red;
@@ -152,16 +149,18 @@ div.f {
 
 @keyframes fslide {
   0% {
-    transform: translate(875px,-1000px);
+    transform: translate(875px,0px);
   }
 
   100% {
-    transform: translate(275px,-1000px);
+    transform: translate(275px,0px);
   }
 }
 
 div.g {
   position: absolute;
+  top:  50vh;
+  left:  300px;
   width: 800px;
   height: 75px;
   background-color: pink;
@@ -173,14 +172,16 @@ div.g {
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-play-state: running;
+ /* transform: origin(200px,-1650px);*/
 }
 
 @keyframes spin {
  0%{
-    transform: rotate(0 deg);
+    transform: rotate(0deg);
 
    }
 100%{
     transform: rotate(360deg);
    }
+}
 }
