@@ -1,20 +1,43 @@
+*{
+  paddig: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+hr{
+  margin: 20px;
+}
+
+h2{
+  margin: 20px;
+}
+
+.imagechange{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding:  50px;
+}
+
+.imagechange img{
+  width: 100%;
+  max-width: 100%;
+}
+
 body{
   text-align:center;
   font-family: 'Hahmlet';
 }
 
-.mySlides Stage 1.JPG{
-  display: none;
-}
-
-input[type=range] {
+#myRange{
   -webkit-appearance: none;
   width: 75%; 
   height: 0px;
   border: .5px solid #000000;
 }
 
-input[type=range]::-webkit-slider-thumb {
+#myRange::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
   height: 36px;
@@ -22,16 +45,5 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 18px;
   background: #ffffff;
   cursor: pointer;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
 }
 
