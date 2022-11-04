@@ -88,5 +88,25 @@ body{
   width: 200px;
 }
 
+.dialogbox{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: auto;
+  width: 50%; 
+  background-color:solid white; 
+  color: black; 
+  border:0.5px solid black
+}
+
+.xButton{
+  position: absolute;
+  top:0; 
+  left:0;
+  border: 0.5px solid #000000;
+  background: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
 
 

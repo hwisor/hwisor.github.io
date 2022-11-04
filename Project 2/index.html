@@ -16,8 +16,14 @@
 <body>
 
   <hr>
-  <h1> Body of a Courtesan in Nine Stages of Decomposition </h1>
+  <h1 id="open"> Body of a Courtesan in Nine Stages of Decomposition </h1>
   <hr>
+
+  <dialog id="example" class="dialogbox">  
+<p>"Body of a Courtesan in Nine Stages" is an example of kusozu, a visual depiction of a corpse in the process of decay and decomposition. The handscroll was painted by Japanese artist Kobayashi Eitaku in the 17th century. <br> <br> The kusozu, "painting of the nine stages" is derived from a traditional Buddhist doctrine that urges meditation on the temporary nature of life and the physical world by contemplating a decaying corpse. </p>  
+<button id="close" class="xButton"><span class="close">&times;</span></button>  
+
+</dialog>
 
     <div class="textchange1">
         <p id="textchange">Courtesan prepares her body for the afterlife</p>
@@ -78,7 +84,21 @@
             }
         } 
 
+        ///
+
         setvalue.style.display = 'none';
+
+        ///
+
+        (function dialog() {    
+        var dialog = document.getElementById('example');    
+            document.getElementById('open').onclick = function() {    
+            dialog.show();    
+        };    
+            document.getElementById('close').onclick = function() {    
+            dialog.close();    
+        };    
+        })();   
 
     </script>
 

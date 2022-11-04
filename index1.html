@@ -15,154 +15,29 @@
 
 <body>
 
-    <div class="textchange1">
-        <p id="textchange">Courtesan prepares her body for the afterlife</p>
-    </div>
+<div>  
 
+<h1 id="open"> Body of Courtesan</h1>
 
-        <hr id="linechange" class="stage1line"> 
-    
+<dialog id="example" style="width:50%; background-color:white; color: black; border:1px solid black;">  
+<p>“Body of a Courtesan in Nine Stages” is an example of kusozu, a visual depiction of a corpse in the process of decay and decomposition. The handscroll was painted by Japanese artist Kobayashi Eitaku in the 17th century. 
 
-    <div class="slidecontainer">
-        <input type="range" min="1" max="9" value="1" class="slider-range" id="myRange">
-        <span id="rangevalue"></span>
-    </div>
+The kusozu, "painting of the nine stages" is derived from a traditional Buddhist doctrine that urges meditation of the temporary nature of life and the physical world by contemplating a decaying corpse.</p>  
+<button id="close"><span class="close">&times;</span></button>  
 
-    <script>
-        let rangevalue = document.getElementById("myRange");
-        let setvalue = document.getElementById("rangevalue");
-        let imgchangevalue = document.getElementById("imgchange")
-        let textchangevalue=document.getElementById("textchange")
-            //setvalue.innerHTML = rangevalue.value;
-            //console.log(rangevalue.value)
-
-
-        //Now will use oninput event.
-       oninput = function changeImage() {
-            let getvalue = rangevalue.value;
-            setvalue.innerHTML = this.value;
-            if (getvalue == 1) {
-            textchangevalue.setAttribute("textchange1");
-            } else if (getvalue == 2) {
-            textchangevalue.setAttribute("textchange2");
-               
-           
-           /* } else if (getvalue == 3) {
-                document.getElementById("textchange").innerHTML = "Abdominal bloating and distention"
-            } else if (getvalue == 4) {
-                document.getElementById("textchange").innerHTML = "Exudation of blood"
-            } else if (getvalue == 5) {
-                document.getElementById("textchange").innerHTML = "Open wounds from insect activity"
-            } else if (getvalue == 6) {
-                document.getElementById("textchange").innerHTML = "Maggot masses are visible "
-            } else if (getvalue == 7) {
-                document.getElementById("textchange").innerHTML = "Consumption by animals and birds"
-            } else if (getvalue == 8) {
-                document.getElementById("textchange").innerHTML = "Skeletonization of body"
-            } else if (getvalue == 9) {
-                 document.getElementById("textchange").innerHTML = "Bones have become disjointed "
-            } */
-        } 
-
-        setvalue.style.display = 'none';
-
-    </script>
-
-    <style type="text/css">
-        *{
-  paddig: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-hr{
-  margin: 20px;
-}
-
-h2{
-  margin: 20px;
-}
-
-.textchange1{
-  position: absolute;
-  transform: translate(4vw, 8vh);
-}
-
-.textchange2{
-position: absolute;
-transform: translate(35vw,8vh);
-
-}
-
-.textchange3{
-position: absolute;
-transform: translate(70vw,8vh);
-
-}
-
-.imagechange{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  padding:  50px;
-  padding-bottom: 10px;
-} 
-
-.imagechange img{
-  width: 1000%;
-  max-width: 100%;
-  transition-timing-function: ease-in-out;
-}
-
-body{
-  text-align:center;
-  font-family: 'Hahmlet';
-}
-
-#myRange{
-  -webkit-appearance: none;
-  width: 75%; 
-  height: 0px;
-  border: .5px solid #000000;
-}
-
-#myRange::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 36px;
-  border-radius: 18px;
-  background: #ffffff;
-  cursor: pointer;
-}
-
-.stage1line{
-  box-sizing: content-box;
-  position: absolute;
-  transform: translate(10vw,20vh)rotate(60deg);
-  border-top: 2px dotted darkgrey;
-  width: 200px;
-}
-
-.stage2line{
-  position: absolute;
-  transform: translate(40vw,20vh)rotate(90deg);
-  border-top: 2px dotted darkgrey;
-  width: 170px;
-}
-
-.stage3line{
-  position: absolute;
-  transform: translate(70vw,20vh)rotate(120deg);
-  border-top: 2px dotted darkgrey;
-  width: 200px;
-}
-
-
-
-
-    </style>
+</dialog>   
+</div>  
+<script type="text/JavaScript">  
+(function() {    
+    var dialog = document.getElementById('example');    
+    document.getElementById('open').onclick = function() {    
+        dialog.show();    
+    };    
+    document.getElementById('close').onclick = function() {    
+        dialog.close();    
+    };    
+})();   
+</script>  
 
 </body>
 
