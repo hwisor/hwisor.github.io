@@ -12,17 +12,36 @@ h2{
   margin: 20px;
 }
 
+.textchange1{
+  position: absolute;
+  transform: translate(4vw, 8vh);
+}
+
+.textchange2{
+position: absolute;
+transform: translate(35vw,8vh);
+
+}
+
+.textchange3{
+position: absolute;
+transform: translate(70vw,8vh);
+
+}
+
 .imagechange{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
   padding:  50px;
-}
+  padding-bottom: 10px;
+} 
 
 .imagechange img{
-  width: 100%;
+  width: 1000%;
   max-width: 100%;
+  transition-timing-function: ease-in-out;
 }
 
 body{
@@ -46,4 +65,28 @@ body{
   background: #ffffff;
   cursor: pointer;
 }
+
+.stage1line{
+  box-sizing: content-box;
+  position: absolute;
+  transform: translate(10vw,20vh)rotate(60deg);
+  border-top: 2px dotted darkgrey;
+  width: 200px;
+}
+
+.stage2line{
+  position: absolute;
+  transform: translate(40vw,20vh)rotate(90deg);
+  border-top: 2px dotted darkgrey;
+  width: 170px;
+}
+
+.stage3line{
+  position: absolute;
+  transform: translate(70vw,20vh)rotate(120deg);
+  border-top: 2px dotted darkgrey;
+  width: 200px;
+}
+
+
 
