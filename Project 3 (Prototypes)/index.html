@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/feb0ccs.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script> 
+
+</head>
+
+<body> 
+
+<div class="container">
+
+    <input type="text" id="name" placeholder="Your name">
+
+    <div id='idea'class="prompt"> genre, perspective, tone, setting </div>
+
+    <button id='generator'> Generate prompt </button>
+
+    <hr>
+
+    <textarea placeholder="Type your story...(300 max)" rows="35" cols="95"> </textarea>
+
+    <input type="submit">
+
+</div>
+
+</body>
+
+<script>
+var genre = ['fantasy',
+             'adventure',
+             'horror',
+             'mystery',
+             'thriller',
+             'dystopian',
+             'science fiction',
+             ];
+
+var perspective = ['first-person',
+                'second-person',
+                'third-person',
+                ];
+
+var tone = ['scary',
+             'sinister',
+             'somber',
+             'exciting',
+             'humorous',
+             'dark',
+             'gloomy',
+             'tense',
+             'whimsical',
+             'lighthearted',
+             'casual',
+             'formal',
+             'satirical',
+             'romantic',
+             ];
+
+var setting = ['airport',
+             'museum',
+             'beach',
+             'castle',
+             'casino',
+             'hotel',
+             'park',
+             'graveyard',
+             'garden',
+             'prison',
+             'classroom',
+             'small town',
+             'big city',
+             'theater',
+             'kitchen',
+             'submarine',
+             'cliff',
+             'attic',
+             'field',
+             'cafe',
+             'desert',
+             'farm',
+             'house party',
+             'library',
+             'restaurant',
+             'lake',
+             'river',
+             'mall',
+             'bedroom',
+             ];
+
+var generator = document.getElementById('generator');
+var idea = document.getElementById('idea');
+
+function randomized(thing) {
+  var index = Math.floor(Math.random() * thing.length);
+  console.log(index);
+  return thing[index];
+}
+
+generator.addEventListener('click', function() {
+  idea.textContent = randomized(genre) + ', ' + randomized(perspective) + ', ' + randomized(tone) + ', ' + randomized(setting);
+});
+
+
+</script>
+
+</html>
