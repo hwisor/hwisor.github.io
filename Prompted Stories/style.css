@@ -1,0 +1,61 @@
+body{
+background-color: #EEECE2;
+}
+
+h1{
+font-family: mrs-eaves-xl-serif, serif;
+font-weight: 400;
+font-style: italic;
+font-size: 120px;
+}
+
+h2{
+font-family: nimbus-sans, sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 18px;
+	
+}
+
+h3{
+font-family: mrs-eaves-xl-serif, serif;
+font-weight: 400;
+font-style: italic;
+font-size: 18px;
+	
+}
+
+p{
+font-family: mrs-eaves-xl-serif, serif;
+font-weight: 400;
+font-style: normal;
+font-size: 16px;
+	
+}
+
+.postpink{
+box-shadow: 0px 0.25px 1px;
+background: #DFC9BA;
+}
+
+.postyellow{
+box-shadow: 0px 0.25px 1px;
+background: #DED2A9;
+}
+
+.postpurple{
+box-shadow: 0px 0.25px 1px;
+background: #C8C5CE;
+}
+
+.postblue{
+box-shadow: 0px 0.25px 1px;
+background: #B4C6CB;
+}
+
+button{
+border: none;
+cursor: pointer;
+appearance: none;
+background-color: inherit;
+}
