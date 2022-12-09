@@ -17,19 +17,20 @@
 <body>
 
 <!-- Top Page --> 
-<div class="container my-4">
+<div class="container my-5">
     <div class="row">
         <div class="col-8">
             <h1 onclick="toggle('about');"> Prompted Stories</h1>
         </div>
-        <div class="col-4">
-            <div class="float-right">
+        <div class="col-lg-4 col-sm-12">
+            <div class="float-right" style="box-shadow:none;">
                 <button data-bs-toggle="modal" data-bs-target="#reg-modal">
                 <img src="pencil.png" width=100px height=100px>
                 </button>
             </div> 
         </div>
     </div>
+
         <div class="col-12">
             <div id="about" class="ghost">
             <p>is a creative writing platform that provides randomized prompts for writers to experiment with. <br><br>
@@ -39,26 +40,26 @@
             <div class="row">
                 <div class="col-3">    
                     <p style="font-size:36px;"><u><em>genre</u></em></p> 
-                    <p style="font-size:24px;">a category of literature identified by form, content, and style. </p>
+                    <p style="font-size:36px;">a category of literature identified by form, content, and style. </p>
                 </div>
 
                 <div class="col-3"> 
                     <p style="font-size:36px;"><u><em>perspective</u></em></p> 
-                    <p style="font-size:24px;">the lens through which the story is told. </p>
+                    <p style="font-size:36px;">the lens through which the story is told. </p>
                 </div>
 
                 <div class="col-3"> 
                     <p style="font-size:36px;"><u><em>tone</u></em></p> 
-                    <p style="font-size:24px;">the narrator’s attitude toward the subject matter.</p>
+                    <p style="font-size:36px;">the narrator’s attitude toward the subject matter.</p>
                 </div>
 
                 <div class="col-3"> 
                     <p style="font-size:36px;"><u><em>setting</u></em></p> 
-                    <p style="font-size:24px;">where (location) the story takes place. </p><br>
+                    <p style="font-size:36px;">where (location) the story takes place. </p><br>
                 </div> 
             </div> <br><br> 
         </div>
-
+    </div>
 <script>
 function toggle(id) {
    var e = document.getElementById(id);
@@ -176,7 +177,7 @@ generator.addEventListener('click', function() {
 
 <!-- Posts --> 
 <section>
-    <div class="container" id="main">
+    <div id="main">
          <div class="row gy-4">
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div style="background-color:#DFC9BA;">
