@@ -5,80 +5,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prompted Stories</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/npj1hwd.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script> 
+
 </head>
 <body>
 
-    <!-- Top Page --> 
-
-    <div class="container my-5">
-         <div class="row">
-            <div class="col-8">
-                <h1> Prompted Stories </h1>
-            </div>
-            <div class="col-4">
-                <div class="float-right">
+<!-- Top Page --> 
+<div class="container my-4">
+    <div class="row">
+        <div class="col-8">
+            <h1 onclick="toggle('about');"> Prompted Stories</h1>
+        </div>
+        <div class="col-4">
+            <div class="float-right">
                 <button data-bs-toggle="modal" data-bs-target="#reg-modal">
-                    <img src="pencil.png" width=100px height=100px>
+                <img src="pencil.png" width=100px height=100px>
                 </button>
-                </div> 
-            </div>
+            </div> 
         </div>
     </div>
+        <div class="col-12">
+            <div id="about" class="ghost">
+            <p>is a creative writing platform that provides randomized prompts for writers to experiment with. <br><br>
 
+            The prompts are generated using 4 categories: <br><br> 
 
-    <!-- Modal --> 
+            <div class="text-center">
+            <p><em>genre, perspective, tone, setting </em><p>  
+            </div><br><br>
+
+            <p>For those who want to practice writing every day, but have trouble with that first page. Whether these prompts inspire your next piece or gets the jumble out, we want to help get writing into your daily routine. </p> <br>
+            </div>
+        </div>
+</div>
+
+<script>
+function toggle(id) {
+   var e = document.getElementById(id);
+   if(e.style.display == 'block')
+      e.style.display = 'none';
+   else
+      e.style.display = 'block';
+}
+</script>
+
+<!-- Modal --> 
 <section>
-    <div class="modal" id="#reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-dialog"> 
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title"> Get the latest updates</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"> </button>
+<div class="modal fade" id="reg-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content container" style="background-color:#EEECE2;">
+            <div class="row gy-4 p-4">
+                <div class="col-12">
+                    <input type="text" class="yourName" id="name" placeholder="Your name">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p> You were never one for parties. You hated driving on rural roads to the middle of nowhere. Entering the party, you were disappointed to find that the only option was cheap beer.</p>
-                    <label for="modal-email" class="form-label"> Your email address:</label>
-                    <inpt type="text" class="form-control" id="modal-email" placeholder="e.g. mario@example.com">
+                <div class="col-12">
+                    <div id='idea'class="promptText"> genre, perspective, tone, setting </div>
                 </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary">Submit</button>
+                <div class="col-12">
+                    <button id='generator'class="promptButton">Generate prompt</button>
+                </div>
+                <div class="col-12">
+                     <textarea class="form-control textBox" id="exampleFormControlTextarea1" rows="10" placeholder="Type your story...(200 max)"></textarea>
+                </div>
+                <div class="col-12 text-center">
+                 <button type="button" class="btn submitButton" data-bs-dismiss="modal">Submit</button>
+                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal JS --> 
+<script>
+    var genre = ['fantasy',
+             'adventure',
+             'horror',
+             'mystery',
+             'thriller',
+             'dystopian',
+             'science fiction',
+             ];
+
+var perspective = ['first-person',
+                'second-person',
+                'third-person',
+                ];
+
+var tone = ['scary',
+             'sinister',
+             'somber',
+             'exciting',
+             'humorous',
+             'dark',
+             'gloomy',
+             'tense',
+             'whimsical',
+             'lighthearted',
+             'casual',
+             'formal',
+             'satirical',
+             'romantic',
+             ];
+
+var setting = ['airport',
+             'museum',
+             'beach',
+             'castle',
+             'casino',
+             'hotel',
+             'park',
+             'graveyard',
+             'garden',
+             'prison',
+             'classroom',
+             'small town',
+             'big city',
+             'theater',
+             'kitchen',
+             'submarine',
+             'cliff',
+             'attic',
+             'field',
+             'cafe',
+             'desert',
+             'farm',
+             'house party',
+             'library',
+             'restaurant',
+             'lake',
+             'river',
+             'mall',
+             'bedroom',
+             ];
+
+var generator = document.getElementById('generator');
+var idea = document.getElementById('idea');
+
+function randomized(thing) {
+  var index = Math.floor(Math.random() * thing.length);
+  console.log(index);
+  return thing[index];
+}
+
+generator.addEventListener('click', function() {
+  idea.textContent = randomized(genre) + ', ' + randomized(perspective) + ', ' + randomized(tone) + ', ' + randomized(setting);
+});
+</script>
 </section>
 
-    <!-- Posts --> 
+<!-- Posts --> 
 <section>
-    <div class="container my-5">
-         <div class="row gy-5 gx-5">
-            <div class="col-sm-12 col-lg-4 postpink p-5">
+    <div class="container" id="main">
+         <div class="row gy-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div style="background-color:#DFC9BA;">
                 <h2> Hope </h2>
                 <h3> horror, second-person, casual, house party </h3> <hr>
-                <p> You were never one for parties. You hated driving on rural roads to the middle of nowhere. Entering the party, you were disappointed to find that the only option was cheap beer. The vodka or gin was always gone by the time you arrived. Absolute fiends. The music playing was music you never listened to. And you couldn't dance. You never understood how it came so naturally to people. To make fools out of themselves. Eyes glanced all around the room, looking for that “one”. Never at you though. Never for you. The party showed no signs of slowing down, that it could go on forever. Until there was a chilling scream and a crash, and a girl laid faced down on the lawn. The music was replaced by boys shouting and girls crying. Looking down, you thought the party was just getting started. </p> 
+                <p class="bodytext"> You were never one for parties. You hated driving on rural roads to the middle of nowhere. Entering the party, you were disappointed to find that the only option was cheap beer. The vodka or gin was always gone by the time you arrived. Absolute fiends. The music playing was music you never listened to. And you couldn't dance. You never understood how it came so naturally to people. To make fools out of themselves. Eyes glanced all around the room, looking for that “one”. Never at you though. Never for you. The party showed no signs of slowing down, that it could go on forever. Until there was a chilling scream and a crash, and a girl laid faced down on the lawn. The music was replaced by boys shouting and girls crying. Looking down, you thought the party was just getting started. </p>
+                </div>
             </div>
-            <div class="col-sm-12 col-lg-4 postyellow p-5">
+
+             <div class="col-sm-12 col-md-6 col-lg-4">
+                <div style="background-color:#DED2A9;">
                 <h2> sofie </h2>
                 <h3> thriller, first-person, somber, kitchen </h3> <hr>
-                <p> I was washing dishes after Sunday breakfast when my youngest left me a stack of mail. She placed them on the wet countertop, where they quickly began to soak. I cursed at her as she ran back outside with the other children. I continued cursing under my breath as I circled through the wet junk mail. Credit card applications, coupon catalogs. I almost threw the whole stack away when I saw a letter from my son. My heart dropped to my stomach, as I hadn't heard from my eldest in two years. With shaky hands, I opened the envelope to find a piece of yellow paper ripped from a notepad. In pencil the note read, “$10,000. Not one dollar less. You cannot get him without it.” I left the house, leaving the water to run in the kitchen sink.</p> 
+                <p class="bodytext"> I was washing dishes after Sunday breakfast when my youngest left me a stack of mail. She placed them on the wet countertop, where they quickly began to soak. I cursed at her as she ran back outside with the other children. I continued cursing under my breath as I circled through the wet junk mail. Credit card applications, coupon catalogs. I almost threw the whole stack away when I saw a letter from my son. My heart dropped to my stomach, as I hadn't heard from my eldest in two years. With shaky hands, I opened the envelope to find a piece of yellow paper ripped from a notepad. In pencil the note read, “$10,000. Not one dollar less. You cannot get him without it.” I left the house, leaving the water to run in the kitchen sink. </p>
+                </div>
             </div>
-            <div class="col-sm-12 col-lg-4 postpurple p-5">
-                <h2> Robert Curtis </h2>
-                <h3> science-fiction, first-person, humorous, lake</h3> <hr>
-                <p> I never thought I'd see the Loch Ness Monster. I mean, I was a firm believer that he wasn’t real, and found it ridiculous that people still believed in him to this day. You’d think after the smartphone there would be hundreds of shitty vertical videos of him. But here I was, on my grandfather’s dock, when I saw him come up only a few yards away. It was dark, and I had first mistaken him for a sea lion because of his blubbery skin. It wasn’t until his neck kept rising endlessly from the water that I knew it was him. I went to grab my phone to record him passing by, but realized I had left it at home. As he descended back into the water, he sent out waves that were big enough to wash over the dock, soaking my pants.</p> 
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div style="background-color:#C8C5CE;">
+                <h2> Robert Curtis  </h2>
+                <h3> science-fiction, first-person, humorous, lake </h3> <hr>
+                <p class="bodytext"> I never thought I'd see the Loch Ness Monster. I mean, I was a firm believer that he wasn’t real, and found it ridiculous that people still believed in him to this day. You’d think after the smartphone there would be hundreds of shitty vertical videos of him. But here I was, on my grandfather’s dock, when I saw him come up only a few yards away. It was dark, and I had first mistaken him for a sea lion because of his blubbery skin. It wasn’t until his neck kept rising endlessly from the water that I knew it was him. I went to grab my phone to record him passing by, but realized I had left it at home. As he descended back into the water, he sent out waves that were big enough to wash over the dock, soaking my pants.</p>
+                </div>
             </div>
-            <div class="col-sm-12 col-lg-4 postblue p-5">
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div style="background-color:#B4C6CB;">
                 <h2> emily M </h2>
                 <h3> fantasy, second-person, tense, museum </h3> <hr>
-                <p> You rushed down the corridor as military men chased after you. Their blue coats still streaky from the oil paint they left behind. You were startled not only by the weapons they had managed to take with them, but the brushstrokes that made up their faces. How they were moving in space. As they followed you into the next wing, you felt shame about how long you admired these men who you kept framed. You thought they would stay there in their own time. You could memorialize them from here.</p> 
+                <p class="bodytext"> You rushed down the corridor as military men chased after you. Their blue coats still streaky from the oil paint they left behind. You were startled not only by the weapons they had managed to take with them, but the brushstrokes that made up their faces. How they were moving in space. As they followed you into the next wing, you felt shame about how long you admired these men who you kept framed. You thought they would stay there in their own time. You could memorialize them from here. </p>
+                </div>
             </div>
-            <div class="col-sm-12 col-lg-4 postpurple p-5">
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div style="background-color:#C8C5CE;">
                 <h2> B </h2>
-                <h3> mystery, third-person, scary, park </h3> <hr>
-                <p> Her body lay twisted by a tree. They found her in the early morning hours, when the rest of the world would be starting to wake. And it wasn’t long after they found her that they found him. And they asked him about the scratches on his neck. He tried to blame the cat, but she was declawed. He then claimed that she came onto him, and he was just defending himself. He said she said. Except she never got to say anything.</p> 
+                <h3> mystery, third-person, scary, park  </h3> <hr>
+                <p class="bodytext"> Her body lay twisted by a tree. They found her in the early morning hours, when the rest of the world would be starting to wake. And it wasn’t long after they found her that they found him. And they asked him about the scratches on his neck. He tried to blame the cat, but she was declawed. He then claimed that she came onto him, and he was just defending himself. He said she said. Except she never got to say anything. </p>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+</section> 
+</section> 
+</section> 
+<footer>
+
+</footer>
 </body>
