@@ -1,0 +1,75 @@
+*{
+    margin: 50px;
+    padding: 0;
+    line-height: 10px;
+}
+
+body{
+    font-family: sans-serif;
+} 
+
+.container{
+    width: 500px;
+    margin: auto;
+}
+
+.item{
+    border-top: 2px mediumpurple;
+}
+
+h1{
+    margin: 1rem auto;
+    color: mediumpurple;
+}
+
+h2{
+    color: mediumpurple;
+}
+
+a{
+    color: purple;
+}
+a:hover{
+    color: red;
+}
+
+.item { 
+    cursor: pointer;
+}
+
+.heading h2::before{
+    content: ':)';
+    width: 30px;
+}
+
+.details{
+    color: purple;
+    display: none;
+}
+
+.active .heading h2::before{
+    content: ':D';
+}
+.active .details{
+    display: block;
+}
+
+
+
+button{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: lavender;
+}
+
+button:hover{
+    background-color: lavender;
+    cursor: pointer;
+}
+
+.btn{
+font-color: blue;
+}

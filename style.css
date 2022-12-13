@@ -1,73 +1,99 @@
-*{
-    margin: 50px;
-    padding: 0;
-    line-height: 10px;
+body {
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
+    width: 140vw;
+    color: black;
+    background-image: linear-gradient(120deg, whitesmoke, floralwhite);
+    margin-left: 30px;
+    font-size: 17px;
+    line-height: 65%;
 }
 
-body{
-    font-family: sans-serif;
-} 
-
-.container{
-    width: 500px;
-    margin: auto;
+h1 {
+    color: darkmagenta;
+    text-decoration: underline 0.2rem;
+    font-size: 22px;
+    padding-bottom: 20px;
+    margin-top: 30px;
 }
 
-.item{
-    border-top: 2px solid blue;
+h2 {
+    color: darkcyan;
+    text-decoration: underline crimson 0.1rem;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
 
-h1{
-    text-align: center;
-    margin: 1rem auto;
-    color: mediumpurple;
+button {
+  margin-top: 20px;
+  background-color: mediumorchid;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-h2{
-    color: mediumpurple;
+button:hover {
+  cursor: pointer;
+  background-color: darkblue;
 }
 
-a{
-    color: purple;
-}
-a:hover{
-    color: red;
+.c {
+  color: green;
+  padding-left: 30px;
 }
 
-.item { 
-    cursor: pointer;
+.ind {
+  padding-left: 60px;
 }
 
-.heading h2::before{
-    content: ':)';
-    display: inline-block;
-    width: 30px;
+.pb {
+  padding-bottom: 20px;
 }
 
-.details{
-    color: purple;
-    display: none;
+.mb {
+  margin-bottom: 20px;
 }
 
-.active .heading h2::before{
-    content: ':D';
-}
-.active .details{
-    display: block;
+.ml {
+  margin-left: 20px:
 }
 
+img {
+    margin-top: 20px;
+}
 
+.italic {
+    font-style: italic;
+}
 
-button{
-    font-size: 1rem;
+.bold {
     font-weight: bold;
-    border: 2px solid blue;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
 }
 
-button:hover{
-    background-color: lavender;
-    cursor: pointer;
+.highlight {
+    background-color: yellow;
 }
+
+.underline {
+    text-decoration: underline;
+}
+
+.hola{
+    color: pink;
+    background-color: green;
+}
+
+img {
+    border-radius: 10%;
+}
+
+ul {
+list-style-type: none
+}
+
+li {
+    padding-bottom: 10px;
+}
+
